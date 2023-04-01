@@ -7,7 +7,7 @@ var lookup = {
     bin: async (req, res) => {
         try {
             let lookup_result;
-            let bin_number = req.bodyString('bin_number');
+            let bin_number = req.bodyString('bin_number'); 
             models.mada_bin.findOne({ where: { bin: bin_number } }).then((result) => {
                 if (result) {
                     lookup_result = {
